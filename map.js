@@ -7,7 +7,8 @@ for (var i = 0; i < height; i++) {
     for (var j = 0; j < length; j++) {
         var cell = {
             x: j,
-            y: i
+            y: i,
+            available: true
         };
         lane.push(cell);
     }
