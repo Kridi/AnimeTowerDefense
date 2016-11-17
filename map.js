@@ -33,15 +33,32 @@ $.each(map, function (index, lane) {
 
         $('#map').append(cellElement);
         cell.el = cellElement;
-        cell.neighbors = addNeighbors(cell);
+        cell.range = addRange(cell);
+        console.log(cell.x + " " + cell.y + " " + cell.range[0].length);
     });
 });
 
-function addNeighbors(cell) {
+function addRange(cell) {
+    var range = [];
+    for (var i = 0; i < 4; i++) {
+        var currentRange = addNeighbors(cell, i * 5);
+        range.push(currentRange);
+    }
+    return range;
+}
+
+function addNeighbors(cell, range) {
     var neighbors = [];
     // nuo cell.x-2 iki cell.x+2
-    for (var i = getMinimumX(cell) ; i <= getMaximumX(cell); i++) {
-        for (var j = getMinimumY(cell) ; j <= getMaximumY(cell) ; j++) {
+
+    var xMin = getMinimumX(cell, range);
+    var xMax = getMaximumX(cell, range);
+
+    var yMin = getMaximumY(cell, range);
+    var yMax = getMinimumY(cell, range);
+
+    for (var i = xMin ; i <= xMax ; i++) {
+        for (var j = yMin ; j <= yMax ; j++) {
             neighbors.push(map[j][i]);
         }
     }
@@ -54,23 +71,23 @@ function getMinimumX(cell) {
     }
     return min;
 }
-function getMaximumX(cell) {
+function getMaximumX(cell, range) {
     var max = cell.x + 2;
     if (max > length -3) {
-        max = length - 7;
+        max = length - (7 + range);
     }
     if (getMinimumX(cell) == 2) {
-        max = 6;
+        max = 6 + range;
     }
     return max;
 }
-function getMinimumY(cell) {
+function getMinimumY(cell, range) {
     var min = cell.y - 2;
     if (min < 0) {
-        min = 5;
+        min = 6 + range;
     }
-    if (getMaximumY(cell) == height -1) {
-        min = height - 5;
+    if (getMaximumY(cell, range) == height - 1) {
+        min = height - (6 + range);
     }
     return min;
 }
