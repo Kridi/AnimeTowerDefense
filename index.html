@@ -2,58 +2,34 @@
 <html>
 <head>
     <script src="jquery-3.1.1.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <title>Zombies vs Humanity</title>
 
-    <title>Anime Tower Defense</title>
-    <style>
-        .start {
-            height: 10px;
-            width: 10px;
-            background-color: green;
-            float: left;
-        }
-        .arena {
-            height: 10px;
-            width: 10px;
-            background-color: #cccccc;
-            float: left;
-        }
-        .death {
-            height: 10px;
-            width: 10px;
-            background-color: red;
-            float: left;
-        }
-        #magic-tower {
-            height: 50px;
-            width: 50px;
-            
-        }
-        .magic-tower-child {
-            height: 50px;
-            width: 50px;
-            position: absolute;
-        }
-        #cannon-tower {
-            height: 50px;
-            width: 50px;
-            
-        }
-
-        .cannon-tower-child {
-            height: 50px;
-            width: 50px;
-            position: absolute;
-        }
-    </style>
 </head>
-    <body>
-        <h1>Gambate</h1>
-        <div id="map"></div>
-        
-    <img id="magic-tower" src="img/magic-tower.png"/>
-    <img id="cannon-tower" src="img/cannon.png"/>
+<body>
+<div id="container">
+    <div id="zombie"></div>
+    <div id="human">
+        <div id="upgrades">
+            <div id="weapons">Weapons</div>
+            <div id="people">People</div>
+            <div id="defence">Defence</div>
+        </div>
+        <div class="panel" id="panel-weapons">
+            <img id="fork" class="upgrade-image" src="img/pitchfork.png" />
+        </div>
+        <div class="panel" id="panel-people">
+            <img id="pleb" class="upgrade-image" src="img/peasant.png"/>
+        </div>
+        <div class="panel" id="panel-defence">
+            <img id="tower" class="upgrade-image" src="img/tower.png" />
+            <img id="tower2" class="upgrade-image" src="img/defensive_sniper_tower.png"/>
+        </div>
 
-        <script src="map.js"></script>
-        <script src="towers.js"></script>
-    </body>
+    </div>
+</div>
+    
+
+<script src="upgrades.js"></script>
+</body>
 </html>

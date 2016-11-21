@@ -1,0 +1,81 @@
+﻿#container {
+    width: 1200px;
+    height: 800px;
+    background-color: #7fffd4;
+    margin: auto;
+    position: relative;
+}
+#zombie {
+    width: 600px;
+    height: 800px;
+    background-color: #228b22;
+    float: left;
+
+}
+#human {
+    width: 600px;
+    height: 800px;
+    background-color: #000000;
+    float: left;
+    background-image: url('img/lot.png');
+}
+#upgrades {
+    width: 600px;
+    height: 80px;
+    background-color: #4169e1;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border-top: 2px solid white;
+    cursor: pointer;
+    user-select: none;
+}
+#weapons {
+    width: 200px;
+    height: 80px;
+    background-color: #000000;
+    float: left;
+}
+#weapons:hover {
+    color: #bdb76b;
+}
+#people {
+    width: 196px;
+    height: 80px;
+    background-color: #000000;
+    float: left;
+    border-left:2px solid white;
+    border-right:2px solid white;
+}
+#people:hover {
+    color: #bdb76b;
+}
+#defence {
+    width: 200px;
+    height: 80px;
+    background-color: #000000;
+    float: left;
+}
+#defence:hover {
+    color: #bdb76b;
+}
+.panel {
+    width: 140px;
+    height: 770px;
+    background-color: whitesmoke;
+    float: right;
+    display: none;
+}
+ .upgrade-image {
+    width: 80px;
+    padding: 30px;
+ }
+ .upgrade-image:hover {
+     cursor: pointer;
+     background-color: #c0c0c0
+ }
