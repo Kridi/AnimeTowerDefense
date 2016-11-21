@@ -68,7 +68,6 @@
     width: 140px;
     height: 770px;
     background-color: whitesmoke;
-    float: right;
     display: none;
 }
  .upgrade-image {
@@ -79,3 +78,22 @@
      cursor: pointer;
      background-color: #c0c0c0
  }
+ #statusPanel {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+ }
+ .statusImg {
+    width: 20px;
+     margin-top: 3px;
+     margin-left: 6px;
+ }
+
+ .stats-row {
+     display: block;
+ }
+
+.right {
+    float: right;
+}
