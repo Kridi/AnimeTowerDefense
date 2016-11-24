@@ -16,7 +16,7 @@ $('#defence').on('click', function (event) {
     $('#panel-people').hide();
     console.log("defence has been clicked");
 });
-$('#fork').on('click', function (event) {
+$('#axe').on('click', function (event) {
     var power = parseInt($('#power').html());
     $('#power').html(power + 1);
     console.log(power);
