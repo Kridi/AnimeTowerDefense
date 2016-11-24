@@ -17,48 +17,96 @@ $('#defence').on('click', function (event) {
     console.log("defence has been clicked");
 });
 $('#fork').on('click', function (event) {
+    var price = 5;
     var power = parseInt($('#power').html());
-    $('#power').html(power + 1);
-    console.log(power);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#power').html(power + 1);
+        console.log(power);
+    }
+    
 });
 $('#handgun').on('click', function (event) {
+    var price = 10;
     var power = parseInt($('#power').html());
-    $('#power').html(power + 5);
-    console.log(power);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#power').html(power + 5);
+        console.log(power);
+    }
 });
 $('#shotgun').on('click', function (event) {
+    var price = 15;
     var power = parseInt($('#power').html());
-    $('#power').html(power + 10);
-    console.log(power);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#power').html(power + 10);
+        console.log(power);
+    }
 });
 $('#pleb').on('click', function (event) {
+    var price = 5;
     var hp = parseInt($('#hp').html());
-    $('#hp').html(hp + 1);
-    console.log(hp);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#hp').html(hp + 1);
+        console.log(hp);
+    }    
 });
 $('#fighter').on('click', function (event) {
+    var price = 10;
     var hp = parseInt($('#hp').html());
-    $('#hp').html(hp + 5);
-    console.log(hp);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#hp').html(hp + 5);
+        console.log(hp);
+    }
 });
 $('#swat').on('click', function (event) {
+    var price = 15;
     var hp = parseInt($('#hp').html());
-    $('#hp').html(hp + 10);
-    console.log(hp);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#hp').html(hp + 10);
+        console.log(hp);
+    }
 });
 $('#tower').on('click', function (event) {
+    var price = 5;
+    var money = $('#coins').html()
+    var finalmoney = 0;
     var def = parseInt($('#def').html());
-    $('#def').html(def + 1);
-    console.log(def);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#def').html(def + 1);        
+        console.log(def);        
+    }    
 });
 $('#tower2').on('click', function (event) {
+    var price = 10;
     var def = parseInt($('#def').html());
-    $('#def').html(def + 5);
-    console.log(def);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#def').html(def + 5);
+        console.log(def);
+    };
 });
 $('#tower3').on('click', function (event) {
+    var price = 15;
     var def = parseInt($('#def').html());
-    $('#def').html(def + 10);
-    console.log(def);
+    if ($('#coins').html() < price) {
+        console.log("neuztenka pinigu")
+    } else {
+        $('#def').html(def + 10);
+        console.log(def);
+    }
 });
 
