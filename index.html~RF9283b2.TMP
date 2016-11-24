@@ -17,18 +17,13 @@
         </div>
         <div class="panel right" id="panel-weapons">
             <img id="fork" class="upgrade-image" src="img/pitchfork.png" />
-            <img id="handgun" class="upgrade-image" src="img/handgun.png" />
-            <img id="shotgun" class="upgrade-image" src="img/shotgun.png" />
         </div>
         <div class="panel right" id="panel-people">
             <img id="pleb" class="upgrade-image" src="img/peasant.png"/>
-            <img id="fighter" class="upgrade-image" src="img/fighter.png" />
-            <img id="swat" class="upgrade-image" src="img/swat.png" />
         </div>
         <div class="panel right" id="panel-defence">
             <img id="tower" class="upgrade-image" src="img/tower.png" />
             <img id="tower2" class="upgrade-image" src="img/defensive_sniper_tower.png"/>
-            <img id="tower3" class="upgrade-image" src="img/SniperTower21.png" />
         </div>
         <div id="statusPanel">
             <div class="stats-row">
