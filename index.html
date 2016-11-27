@@ -3,12 +3,20 @@
 <head>
     <script src="jquery-3.1.1.js"></script>
     <link href="style.css" rel="stylesheet" />
+    <script src="resources.js"></script>
+    <script src="zombieGenerator.js"></script>
+    <script src="battleFieldOfEternity.js"></script>
     <title>Zombies vs Humanity</title>
 
 </head>
 <body>
 <div id="container">
-    <div id="zombie"></div>
+    
+    <div id="zombie">
+     
+    </div>
+    
+    
     <div id="human">
         <div id="upgrades">
             <div id="weapons">Weapons</div>
@@ -16,9 +24,39 @@
             <div id="defence">Defence</div>
         </div>
         <div class="panel right" id="panel-weapons">
-            <img id="axe" class="upgrade-image" src="img/axe.png" />
-            <img id="chain" class="upgrade-image" src="img/chainBall.png" />
-            <img id="fork" class="upgrade-image" src="img/pitchfork.png" />
+            <div id="axe" class="upgradeSet">
+                <img class="upgrade-image" src="img/axe.png" />
+                <div class="upgradeSetStats">
+                    <img class="statusImg left" src="img/retro_coin.png"/>
+                    <div class="left statsText">5</div>
+                </div>
+                <div class="upgradeSetStats">
+                    <img class="statusImg left" src="img/fist.png"/>
+                    <div class="left statsText">1</div>
+                </div>
+            </div>
+            <div id="chain" class="upgradeSet">
+                <img class="upgrade-image" src="img/chainBall.png" />
+                <div class="upgradeSetStats">
+                    <img class="statusImg left" src="img/retro_coin.png" />
+                    <div class="left statsText">10</div>
+                </div>
+                <div class="upgradeSetStats">
+                    <img class="statusImg left" src="img/fist.png" />
+                    <div class="left statsText">3</div>
+                </div>
+            </div>
+            <div id="fork" class="upgradeSet">
+                <img class="upgrade-image" src="img/pitchfork.png" />
+                <div class="upgradeSetStats">
+                    <img class="statusImg left" src="img/retro_coin.png" />
+                    <div class="left statsText">15</div>
+                </div>
+                <div class="upgradeSetStats">
+                    <img class="statusImg left" src="img/fist.png" />
+                    <div class="left statsText">5</div>
+                </div>
+            </div>
         </div>
         <div class="panel right" id="panel-people">
             <img id="boy" class="upgrade-image" src="img/chibi1.png"/>

@@ -16,50 +16,59 @@ $('#defence').on('click', function (event) {
     $('#panel-people').hide();
     console.log("defence has been clicked");
 });
+
+
+
 $('#axe').on('click', function (event) {
-    var power = parseInt($('#power').html());
-    $('#power').html(power + 1);
-    console.log(power);
+    if (game.resources.takeCoins(5)) {
+        game.resources.addPower(1);
+    }
 });
 $('#chain').on('click', function (event) {
-    var power = parseInt($('#power').html());
-    $('#power').html(power + 3);
-    console.log(power);
+    if (game.resources.takeCoins(10)) {
+        game.resources.addPower(3);
+    }
 });
 $('#fork').on('click', function (event) {
-    var power = parseInt($('#power').html());
-    $('#power').html(power + 5);
-    console.log(power);
+    if (game.resources.takeCoins(15)) {
+        game.resources.addPower(5);
+    }
 });
+
+
+
 $('#boy').on('click', function (event) {
-    var lives = parseInt($('#hp').html());
-    $('#hp').html(lives + 1);
-    console.log(lives);
+    if (game.resources.takeCoins(5)) {
+        game.resources.addLife(1);
+    }
 });
 $('#girl').on('click', function (event) {
-    var lives = parseInt($('#hp').html());
-    $('#hp').html(lives + 3);
-    console.log(lives);
+    if (game.resources.takeCoins(10)) {
+        game.resources.addLife(3);
+    }
 });
 $('#peasant').on('click', function (event) {
-    var lives = parseInt($('#hp').html());
-    $('#hp').html(lives + 5);
-    console.log(lives);
+    if (game.resources.takeCoins(15)) {
+        game.resources.addLife(5);
+    }
 });
+
+
+
 $('#tower').on('click', function (event) {
-    var defence = parseInt($('#defences').html());
-    $('#defences').html(defence + 3);
-    console.log(defence);
+    if (game.resources.takeCoins(5)) {
+        game.resources.addDefence(1);
+    }
 });
 $('#tower2').on('click', function (event) {
-    var defence = parseInt($('#defences').html());
-    $('#defences').html(defence + 5);
-    console.log(defence);
+    if (game.resources.takeCoins(10)) {
+        game.resources.addDefence(3);
+    }
 });
 $('#tower3').on('click', function (event) {
-    var defence = parseInt($('#defences').html());
-    $('#defences').html(defence + 10);
-    console.log(defence);
+    if (game.resources.takeCoins(15)) {
+        game.resources.addDefence(5);
+    }
 });
 
 
