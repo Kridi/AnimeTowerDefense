@@ -2,17 +2,19 @@
     return Math.floor((Math.random() * max));
 };
 function addZombie() {
-    var zombie = '<img src="img/zombie2.png" class="zombie">';
+    var zombie = '<div class="zombie"><img src="img/zombie2.png" class="zombie-image"></div>';
     var zombieObject = $(zombie);
     zombieObject.css({ top: randomNumberGenerator(770), left: randomNumberGenerator(500) });
     zombieObject.data('hp', 20);
+    zombieObject.data('total', 20);
+    healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
     zombieObject.animate({
-        left: 570,
+        left: 554,
     }, 10000, function () {
-        
-    });
+
+    });    
 
 }
 function addFastZombie() {
@@ -60,4 +62,15 @@ function healthBar(zombie) {
     var position = zombie.position();
     healthBarObject.css({ top: position.top - 8, left: position.left + 15 });
     zombie.append(healthBarObject);
+}
+function fillGauge(sphere) {
+    var gauge = '<div class="sphere"></div>';
+    var gaugeFill = $(fillGauge);
+    var position = sphere.position();
+    sphere.append(fillGauge);
+
+    fillGauge.animate({
+    }, 10000, function () {
+
+    });
 }

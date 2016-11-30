@@ -78,11 +78,25 @@ $('#tower2').on('click', function (event) {
     if (game.resources.takeCoins(10)) {
         game.resources.addDefence(3);
     }
+    var tower = '<img src="img/tower2.png" class="towers">';
+    var towerObject = $(tower);
+    $(towerObject).css({ top: randomNumberGenerators(635), left: 600 + randomNumberGenerators(380) });
+    $('#human').append(towerObject);
+
+
+    window.setInterval(function () {
+        var damage = 1;
+        var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
+        attackZombie(zombie, damage);
+    }, 1000);
 });
 $('#tower3').on('click', function (event) {
     if (game.resources.takeCoins(15)) {
         game.resources.addDefence(5);
     }
+});
+$('.sphere-fill').delay(1000).queue(function () {
+    $(this).css('width', '100%')
 });
 
 
