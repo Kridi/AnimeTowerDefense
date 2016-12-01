@@ -49,8 +49,10 @@ function addTank() {
 }
 window.setInterval(function () {
     addTank();
-    addZombie();
 }, 5000);
+window.setInterval(function () {
+    addZombie();
+}, 2500);
 
 window.setInterval(function () {
     addFastZombie();
@@ -62,15 +64,4 @@ function healthBar(zombie) {
     var position = zombie.position();
     healthBarObject.css({ top: position.top - 8, left: position.left + 15 });
     zombie.append(healthBarObject);
-}
-function fillGauge(sphere) {
-    var gauge = '<div class="sphere"></div>';
-    var gaugeFill = $(fillGauge);
-    var position = sphere.position();
-    sphere.append(fillGauge);
-
-    fillGauge.animate({
-    }, 10000, function () {
-
-    });
 }

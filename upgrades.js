@@ -95,8 +95,30 @@ $('#tower3').on('click', function (event) {
         game.resources.addDefence(5);
     }
 });
-$('.sphere-fill').delay(1000).queue(function () {
-    $(this).css('width', '100%')
-});
+spheres(".sphere-fill.tank", 5000);
+spheres(".sphere-fill.normal", 2500);
+spheres(".sphere-fill.fast", 1000);
 
+function spheres(sphereName, speed) {
+    fillSphere();
+    window.setInterval(function () {
+        fillSphere();
+    }, speed);
+
+    function fillSphere() {
+        $(sphereName).animate({
+            left: "0%",
+            bottom: "0%",
+            height: "100%",
+            width: "100%"
+        }, speed-10, function () {
+            $(sphereName).css({
+                left: "50%",
+                bottom: "50%",
+                height: "0%",
+                width: "0%"
+            });
+        });
+    }
+}
 

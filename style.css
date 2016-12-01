@@ -171,35 +171,40 @@ body {
     height:80px;
     position:absolute;
 }
-.progress-bar {
-    width: calc(100% - 6px);
-    height: 5px;
-    background: #e0e0e0;
-    padding: 3px;
-    border-radius: 3px;
-    position:absolute;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
-}
 
-.progress-bar-fill {
-    display: block;
-    height: 5px;
-    background: #659cef;
-    border-radius: 3px;    
-    transition: width 5s ease-in-out;
-}
 .sphere {
     background-color: rgba(255, 255, 255, 0.3);
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     position:absolute;
-    bottom: 0;
-    border: 1px solid black;     
+    bottom: 10px;
+    border: 1px solid black;
 }
-sphere-fill { 
-    height: 100%;
-    background: red;
-    border-radius: 3px;    
-    
+.sphere.tank {
+    left:  10px;
 }
+.sphere-fill { 
+    height: 0%;
+    bottom: 50%;
+    width: 0%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+}
+.sphere.normal {
+    left:  70px;
+}
+.sphere.fast {
+    left:  130px;
+}
+.sphere-fill.tank {
+    background-color: red;
+}
+.sphere-fill.normal {
+    background-color: aqua;
+}
+.sphere-fill.fast {
+    background-color: aquamarine;
+}
+
