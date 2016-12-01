@@ -58,7 +58,7 @@ function randomNumberGenerators(max) {
 };
 
 $('#tower').on('click', function (event) {
-    if (game.resources.takeCoins(5)) {
+    if (game.resources.takeCoins(100)) {
         game.resources.addDefence(1);
         var tower = '<img src="img/tower1.png" class="towers">';
         var towerObject = $(tower);
@@ -73,7 +73,7 @@ $('#tower').on('click', function (event) {
 
 });
 $('#tower2').on('click', function (event) {
-    if (game.resources.takeCoins(10)) {
+    if (game.resources.takeCoins(150)) {
         game.resources.addDefence(3);
         var tower = '<img src="img/tower2.png" class="towers">';
         var towerObject = $(tower);
@@ -91,7 +91,7 @@ $('#tower2').on('click', function (event) {
 });
 
 $('#tower3').on('click', function (event) {
-    if (game.resources.takeCoins(15)) {
+    if (game.resources.takeCoins(200)) {
         game.resources.addDefence(5);
         var tower = '<img src="img/defensive_sniper_tower.png" class="towers">';
         var towerObject = $(tower);

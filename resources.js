@@ -13,7 +13,7 @@
             game.interface.setHp(this.hp);
         },
         addCoins: function(money) {
-            this.coins += money;
+            this.coins +=  money;
             game.interface.setCoins(this.coins);
         },
         takeCoins: function (money) {

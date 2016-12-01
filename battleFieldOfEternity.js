@@ -2,7 +2,7 @@
    
     var zombie = $(event.target);
     
-    if (zombie.hasClass('zombie-image')) {
+    if (zombie.hasClass('zombie-image') || zombie.hasClass('healthBar')) {
         zombie = zombie.parent();
     }
     var dmg = game.resources.power;
@@ -18,10 +18,11 @@ function attackZombie(zombie, damage) {
     var total = zombie.data('total');
     var percent = (hp / total) * 100;
     $(health).css('width', percent + '%');
-
-
+    
     if (hp <= 0) {
+        var zombieCoins = zombie.data('coins');
+        game.resources.addCoins(zombieCoins);
         zombie.remove();
-        game.resources.addCoins(1);
+        }
     }
-}
+    
