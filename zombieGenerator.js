@@ -16,15 +16,17 @@ function addZombie() {
 
 }
 function addFastZombie() {
-    var zombie = '<img src="img/zombie1.gif" class="zombie">';
+    var zombie = '<div class="zombie"><img src="img/zombie1.gif" class="zombie-image"></div>';
     var zombieObject = $(zombie);
     zombieObject.css({ top: randomNumberGenerator(770), left: randomNumberGenerator(500) });
     zombieObject.data('hp', 1);
+    zombieObject.data('total', 1);
+    healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
 
     zombieObject.animate({
-        left: 570,
+        left: 554,
     }, 10000, function () {
 
     });
