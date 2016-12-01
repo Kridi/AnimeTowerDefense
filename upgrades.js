@@ -79,10 +79,21 @@ $('#tower2').on('click', function (event) {
         game.resources.addDefence(3);
     }
 });
+
 $('#tower3').on('click', function (event) {
     if (game.resources.takeCoins(15)) {
         game.resources.addDefence(5);
     }
+    var tower = '<img src="img/defensive_sniper_tower.png" class="towers">';
+    var towerObject = $(tower);
+    $(towerObject).css({ top: randomNumberGenerators(635), left: 600 + randomNumberGenerators(380) });
+    $('#human').append(towerObject);
+
+    window.setInterval(function () {
+        var damage = 5;
+        var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
+        attackZombie(zombie, damage);
+    }, 1000);
 });
 
 
