@@ -171,3 +171,40 @@ body {
     height:80px;
     position:absolute;
 }
+
+.sphere {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position:absolute;
+    bottom: 10px;
+    border: 1px solid black;
+}
+.sphere.tank {
+    left:  10px;
+}
+.sphere-fill { 
+    height: 0%;
+    bottom: 50%;
+    width: 0%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+}
+.sphere.normal {
+    left:  70px;
+}
+.sphere.fast {
+    left:  130px;
+}
+.sphere-fill.tank {
+    background-color: red;
+}
+.sphere-fill.normal {
+    background-color: aqua;
+}
+.sphere-fill.fast {
+    background-color: aquamarine;
+}
+

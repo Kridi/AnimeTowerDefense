@@ -2,17 +2,19 @@
     return Math.floor((Math.random() * max));
 };
 function addZombie() {
-    var zombie = '<img src="img/zombie2.png" class="zombie">';
+    var zombie = '<div class="zombie"><img src="img/zombie2.png" class="zombie-image"></div>';
     var zombieObject = $(zombie);
     zombieObject.css({ top: randomNumberGenerator(770), left: randomNumberGenerator(500) });
     zombieObject.data('hp', 20);
+    zombieObject.data('total', 20);
+    healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
     zombieObject.animate({
-        left: 570,
+        left: 554,
     }, 10000, function () {
-        
-    });
+
+    });    
 
 }
 function addFastZombie() {
@@ -49,8 +51,10 @@ function addTank() {
 }
 window.setInterval(function () {
     addTank();
-    addZombie();
 }, 5000);
+window.setInterval(function () {
+    addZombie();
+}, 2500);
 
 window.setInterval(function () {
     addFastZombie();
