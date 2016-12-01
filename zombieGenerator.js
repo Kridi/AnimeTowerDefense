@@ -4,7 +4,7 @@
 function addZombie() {
     var zombie = '<div class="zombie"><img src="img/zombie2.png" class="zombie-image"></div>';
     var zombieObject = $(zombie);
-    zombieObject.css({ top: 20 + randomNumberGenerator(750), left: randomNumberGenerator(500) });
+    zombieObject.css({ top: 20 + randomNumberGenerator(670), left: randomNumberGenerator(500) });
     zombieObject.data('hp', 20);
     zombieObject.data('total', 20);
     zombieObject.data('coins', 3);
@@ -21,7 +21,7 @@ function addZombie() {
 function addFastZombie() {
     var zombie = '<div class="zombie"><img src="img/zombie1.gif" class="zombie-image"></div>';
     var zombieObject = $(zombie);
-    zombieObject.css({ top: 20+ randomNumberGenerator(750), left: randomNumberGenerator(500) });
+    zombieObject.css({ top: 20 + randomNumberGenerator(670), left: randomNumberGenerator(500) });
     zombieObject.data('hp', 1);
     zombieObject.data('total', 1);
     zombieObject.data('coins', 1);
@@ -39,7 +39,7 @@ function addFastZombie() {
 function addTank() {
     var zombie = '<div class="zombie"><img src="img/tankzombie.gif" class="zombie-image"></div>';
     var zombieObject = $(zombie);
-    zombieObject.css({ top: 20 + randomNumberGenerator(750), left: randomNumberGenerator(500) });
+    zombieObject.css({ top: 20 + randomNumberGenerator(670), left: randomNumberGenerator(500) });
     zombieObject.data('hp', 50);
     zombieObject.data('total', 50);
     zombieObject.data('coins', 5);
