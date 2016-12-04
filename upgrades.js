@@ -73,7 +73,7 @@ $('#tower').on('click', function (event) {
 
 });
 $('#tower2').on('click', function (event) {
-    if (game.resources.takeCoins(150)) {
+    if (game.resources.takeCoins(1)) {
         game.resources.addDefence(3);
         var tower = '<img src="img/tower2.png" class="towers">';
         var towerObject = $(tower);
@@ -82,7 +82,7 @@ $('#tower2').on('click', function (event) {
 
 
         window.setInterval(function () {
-            var damage = 1;
+            var damage = 3;
             var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
             attackZombie(zombie, damage);
         }, 1000);
@@ -130,5 +130,12 @@ function spheres(sphereName, speed) {
             });
         });
     }
+}
+function displayDamage(tower) {
+    var damageText = '<div id="damageText"></div>';   
+    var dipslayDamageObject = $(damageText);
+    var position = towers.position();
+    dipslayDamageObject.css({ top: position.top + 2, left: position.left + 15 });
+    towers.prepend(dipslayDamageObject);
 }
 

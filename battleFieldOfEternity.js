@@ -17,12 +17,25 @@ function attackZombie(zombie, damage) {
     var health = zombie.find('.health')[0];
     var total = zombie.data('total');
     var percent = (hp / total) * 100;
-    $(health).css('width', percent + '%');
+    $(health).css('width', percent + '%');    
     
+
     if (hp <= 0) {
         var zombieCoins = zombie.data('coins');
         game.resources.addCoins(zombieCoins);
-        zombie.remove();
+        zombie.remove();               
         }
-    }
+}
+
+$('.killCountDisplay').on(zombie.remove(), function(event){
+    var zombiekillCount = 0;
+    zombiekillCount += 1;
+    zombiekillCount.prepend('.count');
+});
+$(function counting() {
+    $(".count").on(function (attackZombie) {
+        $(this).html(this.textContent + 1);
+    });
+});
+
     
