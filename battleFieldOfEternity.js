@@ -22,9 +22,15 @@ function attackZombie(zombie, damage) {
 
     if (hp <= 0) {
         var zombieCoins = zombie.data('coins');
+        var zombieDamage = zombie.data('damage');
+        var zombieArrived = zombie.data('arrived');
         game.resources.addCoins(zombieCoins);
         zombie.remove();
         game.resources.addKillCount();
+        if (zombieArrived == 1) {
+            game.resources.takeDamage(zombieDamage);
+        }
+        
     }
 }
 

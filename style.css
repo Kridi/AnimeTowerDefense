@@ -214,13 +214,6 @@ body {
     background-color: aquamarine;
 }
 
-.killCountDisplay{
-    float: left;
-    font-size: 15px;
-    font-weight: bold;      
-    width:20px;
-    height:20px;
-}
 .count{
     font-size:100px;
     position:relative;
@@ -232,6 +225,23 @@ body {
     font-size: 20px;
     position: absolute;
     color: yellow;
+}
+
+
+.killCountImg {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;      
+    width:20px;
+    height:20px;
+}
+.damageCountImg{
+    float: left;
+    font-size: 15px;
+    font-weight: bold;      
+    width:25px;
+    height:25px;
+    margin-left: 50px;
 }
 
 

@@ -4,7 +4,9 @@
         coins: 0,
         power: 0,
         defences: 0,
-        killCount:0,
+        killCount: 0,
+        damage: 0,
+
         addLife: function(lives) {
             this.hp += lives;
             game.interface.setHp(this.hp);
@@ -25,6 +27,14 @@
             } else {
                 return false;
             }
+        },
+        addDamage: function (damage) {
+            this.damage += damage;
+            game.interface.setDamage(this.damage);
+        },
+        takeDamage: function (damage) {
+            this.damage -= damage;
+            game.interface.setDamage(this.damage);
         },
         addPower: function(power) {
             this.power += power;
@@ -60,8 +70,11 @@
         setDefences: function(defence) {
             $('#defences').html(defence);
         },
-        setKillCount:function(kill) {
-            $('.count').html(kill);
+        setKillCount: function(kill) {
+            $('.display-kills').html(kill);
+        },
+        setDamage: function(damage) {
+            $('.display-damage').html(damage);
         }
     }
 }

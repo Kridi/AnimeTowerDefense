@@ -9,13 +9,15 @@ function addZombie() {
     zombieObject.data('total', 20);
     zombieObject.data('coins', 3);
     zombieObject.data('damage', 3);
+    zombieObject.data('arrived', 0);
     healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
     zombieObject.animate({
         left: 554,
     }, 10000, function () {
-
+        zombieObject.data('arrived', 1);
+        game.resources.addDamage(3);
     });    
 
 }
@@ -27,6 +29,7 @@ function addFastZombie() {
     zombieObject.data('total', 1);
     zombieObject.data('coins', 1);
     zombieObject.data('damage', 1);
+    zombieObject.data('arrived', 0);
     healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
@@ -34,7 +37,8 @@ function addFastZombie() {
     zombieObject.animate({
         left: 554,
     }, 10000, function () {
-
+        zombieObject.data('arrived', 1);
+        game.resources.addDamage(1);
     });
 }
 
@@ -46,13 +50,15 @@ function addTank() {
     zombieObject.data('total', 50);
     zombieObject.data('coins', 5);
     zombieObject.data('damage', 5);
+    zombieObject.data('arrived', 0);
     healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
     zombieObject.animate({
         left: 554,
     }, 10000, function () {
-
+        zombieObject.data('arrived', 1);
+        game.resources.addDamage(5);
     });
 }
 window.setInterval(function () {

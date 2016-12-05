@@ -12,12 +12,17 @@
 <body>
 <div id="container">    
     
-    <div id="zombie">
-        <div id="killCount">
-            <img class="killCountDisplay" src="img/skull_sprite_by_goodlyay-d6qf9nn.png"/>
-            <div class="count">0</div>
+    <div id="zombie" class="topDamageSet">
+        <div class="topDamageStats">
+            <img class="killCountImg left" src="img/skull_sprite_by_goodlyay-d6qf9nn.png"/>
+            <div class="count left display-kills">0</div>
+        </div>
+        <div class="topDamageStats">
+            <img class="damageCountImg left" src="img/damage.png" />
+            <div class="count left display-damage">0</div>
         </div>
     </div>
+    
     <div class="sphere tank">
         <div class="sphere-fill tank"><img class="sphereImg" src="img/tankzombie.gif"/></div>
     </div>
@@ -138,7 +143,8 @@
                     <div class="left statsText">5</div>
                 </div>
             </div>
-        </div>        
+        </div>     
+           
         <div id="statusPanel">
             <div class="stats-row">
                 <img class="statusImg right" src="img/heart.png" />
