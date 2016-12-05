@@ -223,4 +223,9 @@ body {
     font-weight: bold;
     color:red;
 }
+.damageText {
+    font-size: 20px;
+    position: absolute;
+    color: yellow;
+}
 

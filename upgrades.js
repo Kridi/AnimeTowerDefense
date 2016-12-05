@@ -57,54 +57,7 @@ function randomNumberGenerators(max) {
     return Math.floor((Math.random() * max));
 };
 
-$('#tower').on('click', function (event) {
-    if (game.resources.takeCoins(100)) {
-        game.resources.addDefence(1);
-        var tower = '<img src="img/tower1.png" class="towers">';
-        var towerObject = $(tower);
-        $(towerObject).css({ top: randomNumberGenerators(635), left: 600 + randomNumberGenerators(380) });
-        $('#human').append(towerObject);
-        window.setInterval(function () {
-            var damage = 1;
-            var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
-            attackZombie(zombie, damage);
-        }, 1000);
-    }
 
-});
-$('#tower2').on('click', function (event) {
-    if (game.resources.takeCoins(150)) {
-        game.resources.addDefence(3);
-        var tower = '<img src="img/tower2.png" class="towers">';
-        var towerObject = $(tower);
-        $(towerObject).css({ top: randomNumberGenerators(635), left: 600 + randomNumberGenerators(380) });
-        $('#human').append(towerObject);
-
-
-        window.setInterval(function () {
-            var damage = 3;
-            var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
-            attackZombie(zombie, damage);
-        }, 1000);
-    
-    }
-});
-
-$('#tower3').on('click', function (event) {
-    if (game.resources.takeCoins(200)) {
-        game.resources.addDefence(5);
-        var tower = '<img src="img/defensive_sniper_tower.png" class="towers">';
-        var towerObject = $(tower);
-        $(towerObject).css({ top: randomNumberGenerators(635), left: 600 + randomNumberGenerators(380) });
-        $('#human').append(towerObject);
-
-        window.setInterval(function () {
-            var damage = 5;
-            var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
-            attackZombie(zombie, damage);
-        }, 1000);
-    }
-});
 spheres(".sphere-fill.tank", 5000);
 spheres(".sphere-fill.normal", 2500);
 spheres(".sphere-fill.fast", 1000);
@@ -131,11 +84,5 @@ function spheres(sphereName, speed) {
         });
     }
 }
-function displayDamage(tower) {
-    var damageText = '<div id="damageText"></div>';   
-    var dipslayDamageObject = $(damageText);
-    var position = towers.position();
-    dipslayDamageObject.css({ top: position.top + 2, left: position.left + 15 });
-    towers.prepend(dipslayDamageObject);
-}
+
 
