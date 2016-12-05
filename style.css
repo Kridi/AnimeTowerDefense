@@ -112,10 +112,10 @@
 }
 
 .upgradeSetStats {
-    float: left;
-    width: 50px;
+    float: left;       
     padding-left: 15px;
     height: 30px;
+
 }
 
 .upgradeSet {
@@ -207,5 +207,20 @@ body {
 }
 .sphere-fill.fast {
     background-color: aquamarine;
+}
+
+.killCountDisplay{
+    float: left;
+    font-size: 15px;
+    font-weight: bold;      
+    width:20px;
+    height:20px;
+}
+.count{
+    font-size:100px;
+    position:relative;
+    font-size: 20px;
+    font-weight: bold;
+    color:red;
 }
 
