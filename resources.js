@@ -4,6 +4,7 @@
         coins: 0,
         power: 0,
         defences: 0,
+        killCount:0,
         addLife: function(lives) {
             this.hp += lives;
             game.interface.setHp(this.hp);
@@ -40,6 +41,10 @@
         takeDefence: function(defence) {
             this.defences -= defence;
             game.interface.setDefences(this.defences);
+        },
+        addKillCount: function() {
+            this.killCount++;
+            game.interface.setKillCount(this.killCount);
         }
     },
     interface: {
@@ -54,6 +59,9 @@
         },
         setDefences: function(defence) {
             $('#defences').html(defence);
+        },
+        setKillCount:function(kill) {
+            $('.count').html(kill);
         }
     }
 }
