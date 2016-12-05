@@ -27,15 +27,6 @@ function attackZombie(zombie, damage) {
         }
 }
 
-$('.killCountDisplay').on(zombie.remove(), function(event){
-    var zombiekillCount = 0;
-    zombiekillCount += 1;
-    zombiekillCount.prepend('.count');
-});
-$(function counting() {
-    $(".count").on(function (attackZombie) {
-        $(this).html(this.textContent + 1);
-    });
-});
+
 
     

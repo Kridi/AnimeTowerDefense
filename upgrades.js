@@ -73,7 +73,7 @@ $('#tower').on('click', function (event) {
 
 });
 $('#tower2').on('click', function (event) {
-    if (game.resources.takeCoins(1)) {
+    if (game.resources.takeCoins(150)) {
         game.resources.addDefence(3);
         var tower = '<img src="img/tower2.png" class="towers">';
         var towerObject = $(tower);
