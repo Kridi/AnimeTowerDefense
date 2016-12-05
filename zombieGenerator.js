@@ -8,6 +8,7 @@ function addZombie() {
     zombieObject.data('hp', 20);
     zombieObject.data('total', 20);
     zombieObject.data('coins', 3);
+    zombieObject.data('damage', 3);
     healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
@@ -25,6 +26,7 @@ function addFastZombie() {
     zombieObject.data('hp', 1);
     zombieObject.data('total', 1);
     zombieObject.data('coins', 1);
+    zombieObject.data('damage', 1);
     healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
@@ -43,6 +45,7 @@ function addTank() {
     zombieObject.data('hp', 50);
     zombieObject.data('total', 50);
     zombieObject.data('coins', 5);
+    zombieObject.data('damage', 5);
     healthBar(zombieObject);
     $('#zombie').append(zombieObject);
 
