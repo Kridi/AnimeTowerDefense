@@ -74,10 +74,12 @@
             $('.display-kills').html(kill);
         },
         setDamage: function(damage) {
-            $('.display-damage').html(damage);
+            $('.display-damage').html(damage);            
+        }       
         }
     }
-}
+
 $(document).ready(function() {
     game.resources.addCoins(15);
 });
+

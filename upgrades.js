@@ -61,6 +61,7 @@ function randomNumberGenerators(max) {
 spheres(".sphere-fill.tank", 5000);
 spheres(".sphere-fill.normal", 2500);
 spheres(".sphere-fill.fast", 1000);
+spheres(".sphere-fill.walker", 25000);
 
 function spheres(sphereName, speed) {
     fillSphere();

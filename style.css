@@ -213,6 +213,12 @@ body {
 .sphere-fill.fast {
     background-color: aquamarine;
 }
+.sphere.walker {
+    left:  190px;
+}
+.sphere-fill.walker {
+    background-color: green;
+}
 
 .count{
     font-size:100px;

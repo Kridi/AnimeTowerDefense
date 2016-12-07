@@ -29,11 +29,20 @@ function attackZombie(zombie, damage) {
         game.resources.addKillCount();
         if (zombieArrived == 1) {
             game.resources.takeDamage(zombieDamage);
-        }
-        
-    }
-}
+            
+            }
+            }
+        }      
 
+function gameOver(damage){    
+    if (damage >= 100) {
+        alert("GAME OVER");
+        document.location.reload();
+}
+}
+window.setInterval(function () {
+    gameOver(game.resources.damage);
+}, 100);
 
 
     
