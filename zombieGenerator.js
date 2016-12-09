@@ -61,6 +61,27 @@ function addTank() {
         game.resources.addDamage(5);
     });
 }
+
+function addPink() {
+    var zombie = '<div class="zombie"><img src="img/pinkZombie.png" class="zombie-image"></div>';
+    var zombieObject = $(zombie);
+    zombieObject.css({ top: 20 + randomNumberGenerator(670), left: randomNumberGenerator(500) });
+    zombieObject.data('hp', 75);
+    zombieObject.data('total', 75);
+    zombieObject.data('coins', 15);
+    zombieObject.data('damage', 10);
+    zombieObject.data('arrived', 0);
+    healthBar(zombieObject);
+    $('#zombie').append(zombieObject);
+
+    zombieObject.animate({
+        left: 554,
+    }, 10000, function () {
+        zombieObject.data('arrived', 1);
+        game.resources.addDamage(10);
+    });
+}
+
 window.setInterval(function () {
     addTank();
 }, 5000);
@@ -71,6 +92,9 @@ window.setInterval(function () {
 window.setInterval(function () {
     addFastZombie();
 }, 1000);
+window.setInterval(function () {
+    addPink();
+}, 10000);
 
 function healthBar(zombie) {
     var healthBar = '<div class="healthBar"><div class="health"></div></div>';

@@ -204,6 +204,9 @@ body {
 .sphere.fast {
     left:  130px;
 }
+.sphere.pink {
+    left:  190px;
+}
 .sphere-fill.tank {
     background-color: red;
 }
@@ -212,6 +215,9 @@ body {
 }
 .sphere-fill.fast {
     background-color: aquamarine;
+}
+.sphere-fill.pink {
+    background-color: pink;
 }
 
 .count{
