@@ -30,9 +30,16 @@ function attackZombie(zombie, damage) {
         if (zombieArrived == 1) {
             game.resources.takeDamage(zombieDamage);
         }
-        
+      }
+}
+function gameOver(damage) {
+    if (damage >= 100) {
+        alert("GAME OVER");
     }
 }
+window.setInterval(function () {
+    gameOver(game.resources.damage);
+}, 10000);
 
 
 
