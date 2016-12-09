@@ -46,6 +46,22 @@ $('#tower3').on('click', function (event) {
         }, 1000);
     }
 });
+$('#castle').on('click', function (event) {
+    if (game.resources.takeCoins(300)) {
+        game.resources.addDefence(15);
+        var tower = '<div class="towers"><img src="img/castle.png" class="towers"></div>';
+        var towerObject = $(tower);
+        $(towerObject).css({ top: randomNumberGenerators(635), left: 600 + randomNumberGenerators(380) });
+        $('#human').append(towerObject);
+
+        window.setInterval(function () {
+            var damage = 15;
+            var zombie = $($('.zombie')[randomNumberGenerators($('.zombie').length)]);
+            attackZombie(zombie, damage);
+            displayDamage(towerObject, damage);
+        }, 1000);
+    }
+});
 function displayDamage(towers, damage) {
     var damageText = '<div class="damageText">'+ damage + '</div>';
     var dipslayDamageObject = $(damageText);
